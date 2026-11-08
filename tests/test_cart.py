@@ -31,3 +31,18 @@ class CartTests(unittest.TestCase):
         self.assertEqual([], self.cart.items)
         self.assertEqual(0, self.cart.total_cost())
         self.assertFalse(self.cart.remove_dvd(dvd))
+
+    def test_discounted_total(self):
+        self.cart.add_dvd(DigitalVideoDisc("A", cost=40))
+        self.cart.add_dvd(DigitalVideoDisc("B", cost=60))
+        for percent, expected in [(0, 100), (20, 80), (100, 0), (12.5, 87.5)]:
+            with self.subTest(percent=percent):
+                self.assertAlmostEqual(expected, self.cart.total_cost_with_discount(percent))
+        self.assertEqual(100, self.cart.total_cost())
+        self.assertEqual(0, Cart().total_cost_with_discount(20))
+
+    def test_invalid_discount_percent(self):
+        for percent in [-1, 100.01, 150, float("nan"), float("inf"), -float("inf")]:
+            with self.subTest(percent=percent):
+                with self.assertRaises(ValueError):
+                    self.cart.total_cost_with_discount(percent)
