@@ -5,8 +5,9 @@
 `git config --global` áp dụng cho tài khoản hệ điều hành, thường lưu ở
 `~/.gitconfig` (Windows: `%USERPROFILE%\.gitconfig`). `--local` chỉ áp dụng
 cho repository hiện tại, lưu ở `.git/config`, và ghi đè giá trị global cùng
-tên. Không đặt tên/email sinh viên giả vào cấu hình global. Workspace này
-dùng danh tính kỹ thuật cục bộ cho đến khi sinh viên cung cấp thông tin thật.
+tên. Workspace cấu hình local `Tran Hieu Trung` và
+`trungtran140826@gmail.com`; không thay cấu hình global của máy. Các commit
+cục bộ dùng danh tính kỹ thuật lúc đầu đã được sửa trước khi chia sẻ.
 
 ## Ba vùng làm việc và hoàn tác
 

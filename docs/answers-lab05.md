@@ -51,5 +51,6 @@ Vì thế không dùng riêng `--contains` để kết luận bản sửa chưa 
 Workflow `.github/workflows/ci.yml` chạy unittest trên PR tới master hoặc
 release/** và trên push master, bằng Python 3.12. Job `test` phải được
 chọn làm required status check sau lần chạy đầu. Lỗi được kiểm chứng trong
-bản sao nháp bằng cách cố ý làm sai total_cost rồi thấy tests FAIL; kiểm
-chứng nút merge bị khóa là bước GitHub cần thực hiện sau khi kết nối repo.
+bản sao nháp và PR demo thật bằng cách cố ý làm sai total_cost: tests FAIL,
+GitHub báo trạng thái merge BLOCKED. PR demo được đóng mà không merge;
+master giữ mã đúng. Liên kết các check run nằm trong báo cáo thực hành.
