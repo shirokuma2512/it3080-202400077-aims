@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE / hệ điều hành
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Sản phẩm build / đóng gói
+dist/
+build/
+*.zip
+
+# Công cụ cục bộ, bằng chứng thực thi và bản sao kiểm toán
+.tools/
+tmp/
+output/
