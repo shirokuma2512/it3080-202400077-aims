@@ -30,8 +30,11 @@ PR và dọn nhánh sau merge.
 | Squash | Gộp thay đổi thành một commit mới | Lịch sử gọn; revert một commit; SHA nhánh không nằm trong master |
 | Rebase | Phát lại từng commit trên base mới | Tuyến tính, giữ các bước; SHA đổi; có thể phải revert nhiều commit |
 
-Local history thực hiện đủ ba cơ chế này. Các sự kiện Changes requested,
-Approved và ít nhất 5 PR Merged chỉ có thể được xác nhận trên GitHub.
+GitHub history thực hiện đủ ba cơ chế này: PR #3 dùng merge commit, #4
+dùng squash và #5 dùng rebase. Đến release/lab02 đã có 6 PR merged.
+PR #3 có self-review comment và commit xử lý giỏ rỗng được push sau comment.
+Vì làm solo, không có partner để tạo Changes requested/Approved; không
+coi self-review là approval. Số approval bắt buộc được đặt 0 theo handout.
 
 ## Review và bảo vệ nhánh
 
