@@ -10,6 +10,11 @@ Các thay đổi đáng chú ý, theo Keep a Changelog và Semantic Versioning.
 - Sắp xếp giỏ theo tên hoặc giá tăng dần.
 - search_by_category(): khớp category, không phân biệt hoa thường.
 
+## [1.0.1] - 2026-11-09
+
+### Fixed
+- search_by_title() không phân biệt hoa thường; thêm regression test cho "lion".
+
 ## [1.0.0] - 2026-11-09
 
 ### Added
