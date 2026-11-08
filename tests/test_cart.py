@@ -46,3 +46,25 @@ class CartTests(unittest.TestCase):
             with self.subTest(percent=percent):
                 with self.assertRaises(ValueError):
                     self.cart.total_cost_with_discount(percent)
+
+    def test_sort_by_title(self):
+        self.cart.sort_by_title()
+        self.assertEqual([], self.cart.items)
+        discs = [DigitalVideoDisc("zebra", cost=3), DigitalVideoDisc("Alpha", cost=2),
+                 DigitalVideoDisc("alpha", cost=1)]
+        for dvd in discs:
+            self.cart.add_dvd(dvd)
+        self.cart.sort_by_title()
+        self.assertEqual([discs[1], discs[2], discs[0]], self.cart.items)
+        self.assertEqual(6, self.cart.total_cost())
+
+    def test_sort_by_cost(self):
+        self.cart.sort_by_cost()
+        self.assertEqual([], self.cart.items)
+        discs = [DigitalVideoDisc("A", cost=3), DigitalVideoDisc("B", cost=1),
+                 DigitalVideoDisc("C", cost=1)]
+        for dvd in discs:
+            self.cart.add_dvd(dvd)
+        self.cart.sort_by_cost()
+        self.assertEqual([discs[1], discs[2], discs[0]], self.cart.items)
+        self.assertEqual(5, self.cart.total_cost())

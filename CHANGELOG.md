@@ -4,6 +4,9 @@ Các thay đổi đáng chú ý, theo Keep a Changelog và Semantic Versioning.
 
 ## [Unreleased]
 
+### Added
+- Sắp xếp giỏ theo tên hoặc giá tăng dần.
+
 ## [1.0.0] - 2026-11-09
 
 ### Added
